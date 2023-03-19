@@ -78,6 +78,7 @@ you can also calculate the ordinary estimated extremile without extrapolation by
 ord_extremile_hat = OKE_qr(x, y, lambda_2n, kernel, C, s, tau_extreme, CDF_hat)
 ```
 
+Finally, we can evaluate the models by Abias and RMSE of the estimates
 ```R
 ## Abias and RMSE calculation  
 
