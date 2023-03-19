@@ -35,7 +35,7 @@ xpareto <- function(tau,scale,shape)
 
 ## Model Settings and Data Generalization
 n = 200			# number of obsevations
-d = 3			# number of covariates dimensions
+d = 10		# number of covariates dimensions
 k_1 = as.integer(n^(0.1))			# n-k_1 is the end point of extremile interval
 k_n = floor(3*n^(1/2))			#  n-k_n is the start point of extremile interval
 tau_extreme = 0.99			# Extreme extremile level
