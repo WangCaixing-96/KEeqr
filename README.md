@@ -59,17 +59,20 @@ kernel = rbfdot(sigma=1) # The standard RBF kernel
 CDF_hat = CDF_QR(x, y, kernel, C, s) # the estimated CDF of every sample
 
 ```
+
+
+```R
 ## Extremile Estimation
 Next, you can calculate the estimated extremile by  
 
-```R
 lambda_2n = 0.01 # Parameter controls the smoothness of the extremile model
 kernel = rbfdot(sigma=1) # The standard RBF kernel
 extremile_hat = KEE_qr(x, y, lambda_2n, kernel, C, s, k_1, k_n, tau_extreme, CDF_hat)
 ```
-## Ordinary Extremile Estimation
-you can calculate the ordinary estimated extremile without extrapolation by 
+
 ```R
+## Ordinary Extremile Estimation
+you can also calculate the ordinary estimated extremile without extrapolation by 
 ord_extremile_hat = OKE_qr(x, y, lambda_2n, kernel, C, s, tau_extreme, CDF_hat)
 ```
 
