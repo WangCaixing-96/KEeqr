@@ -60,23 +60,33 @@ CDF_hat = CDF_QR(x, y, kernel, C, s) # the estimated CDF of every sample
 
 ```
 
-
+Next, you can calculate the estimated extremile by  
 ```R
 ## Extremile Estimation
-Next, you can calculate the estimated extremile by  
+
 
 lambda_2n = 0.01 # Parameter controls the smoothness of the extremile model
 kernel = rbfdot(sigma=1) # The standard RBF kernel
 extremile_hat = KEE_qr(x, y, lambda_2n, kernel, C, s, k_1, k_n, tau_extreme, CDF_hat)
 ```
 
+you can also calculate the ordinary estimated extremile without extrapolation by 
 ```R
 ## Ordinary Extremile Estimation 
-you can also calculate the ordinary estimated extremile without extrapolation by 
+
 
 ord_extremile_hat = OKE_qr(x, y, lambda_2n, kernel, C, s, tau_extreme, CDF_hat)
 ```
 
+```R
+## Abias and RMSE calculation  
+
+Abias_extra = mean(abs(extremile_hat - true_extremile)) # Absolute bias of estimated extremile with extrapolation
+RMSE_extra = sqrt(mean((extremile_hat - true_extremile)^2)) # Square root of MSE of estimated extremile with extrapolation
+
+Abias_ord = mean(abs(extremile_hat - true_extremile)) # Absolute bias of estimated extremile without extrapolation
+RMSE_ord = sqrt(mean((extremile_hat - true_extremile)^2)) # Square root of MSE of estimated extremile without extrapolation
+```
 
 
 
