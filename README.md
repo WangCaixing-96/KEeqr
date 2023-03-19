@@ -22,11 +22,11 @@ library(kernlab)
 library(VGAM)
 
 ## Extremile generating function
-xpareto <- function(tau,scale,shape)
+xpareto <- function(tau, scale, shape)
 {
-  f <- function(x,scale,shape,tau)
+  f <- function(x, scale, shape, tau)
   {
-    qpareto(x,scale,shape)*J_tau(tau,x)
+    qpareto(x, scale, shape)*J_tau(tau, x)
   }
 
   res = integrate(f, lower = 0, upper = 1, shape=shape, scale=scale, tau=tau, rel.tol=5*10^8*.Machine$double.eps)$value
