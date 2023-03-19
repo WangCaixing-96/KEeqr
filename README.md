@@ -45,7 +45,7 @@ beta = c(runif(d))/10  # model parameters
 f_x = apply(2 * pi * x, 2, sin)%*%beta # main function
 epsilo = rpareto(n, scale = 1, shape = 3) # error terms
 y = f_x + (1 + r * apply(x, 1, mean)) * epsilo # model setting
-true_extremile = f_x + (1 + apply(x, 1, mean)) * xpareto(tau.extreme, scale=1, shape=3) # the true extremile in level tau_extremile
+true_extremile = f_x + (1 + apply(x, 1, mean)) * xpareto(tau_extreme, scale=1, shape=3) # the true extremile in level tau_extremile
 ```
 
 Then we first estimate Condition CDF by the quantile regression process
