@@ -71,8 +71,8 @@ extremile_hat = KEE_qr(x, y, lambda_2n, kernel, C, s, k_1, k_n, tau_extreme, CDF
 ```
 
 ```R
-## Ordinary Extremile Estimation
-you can also calculate the ordinary estimated extremile without extrapolation by 
+## Ordinary Extremile Estimation you can also calculate the ordinary estimated extremile without extrapolation by 
+
 ord_extremile_hat = OKE_qr(x, y, lambda_2n, kernel, C, s, tau_extreme, CDF_hat)
 ```
 
