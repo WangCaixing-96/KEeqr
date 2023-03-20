@@ -1,10 +1,10 @@
 # KEeqr
-This is an R package for "Estimation of Conditional Extremiles in Reproducing Kernel Hilbert Space"
+This is an R package for "Estimation of Conditional Extremiles in Reproducing Kernel Hilbert Space".
 
 
 ## Installation
 
-You can use `devtools` to directly install the latest version from Github
+You can use `devtools` to directly install the latest version from Github.
 
 ```R
 # install.packages("devtools")
